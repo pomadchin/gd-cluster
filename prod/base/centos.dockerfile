@@ -27,4 +27,4 @@ RUN wget -O /tmp/maven.tar.gz http://mirrors.gigenet.com/apache/maven/maven-3/3.
 RUN tar -xvf /tmp/maven.tar.gz -C /usr/local/
 RUN cd /usr/local && ln -s apache-maven-3.3.9 maven
 
-
+RUN useradd -ms /bin/bash hadoop
