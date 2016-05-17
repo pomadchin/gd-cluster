@@ -21,7 +21,7 @@ RUN chown -R hadoop:hadoop $ACCUMULO_HOME
 USER hadoop
 
 # Geo Iterators
-RUN sbin/load-iterators.sh
+RUN /sbin/load-iterators.sh
 
 WORKDIR "${ACCUMULO_HOME}"
 ENTRYPOINT [ "/sbin/entrypoint.sh" ]
