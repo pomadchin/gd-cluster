@@ -20,4 +20,5 @@ WORKDIR "${ZOOKEEPER_HOME}"
 VOLUME [ "$ZOOKEEPER_DATA" ]
 
 ENTRYPOINT [ "/sbin/entrypoint.sh" ]
+RUN chmod 755 /sbin/entrypoint.sh
 CMD [ "zkServer.sh", "start-foreground" ]

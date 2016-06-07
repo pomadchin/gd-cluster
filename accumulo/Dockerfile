@@ -18,7 +18,9 @@ RUN set -x && \
 COPY ./fs /
 
 # Geo Iterators
-RUN /sbin/load-iterators.sh
+CMD ["/sbin/load-iterators.sh"]
 
 WORKDIR "${ACCUMULO_HOME}"
+
+RUN chmod 755 /sbin/entrypoint.sh
 ENTRYPOINT [ "/sbin/entrypoint.sh" ]
