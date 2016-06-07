@@ -17,5 +17,6 @@ RUN mkdir -p /data/spark
 VOLUME [ "/data/spark" ]
 
 WORKDIR "${SPARK_HOME}"
+RUN chmod 755 /sbin/entrypoint.sh
 ENTRYPOINT [ "/sbin/entrypoint.sh" ]
 
