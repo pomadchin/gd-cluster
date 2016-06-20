@@ -23,9 +23,7 @@ else
 fi
 
 # Ensure that the proper path structure is in place
-hadoop fs -mkdir /accumulo
-hadoop fs -mkdir /accumulo/classpath
-hadoop fs -mkdir /accumulo/classpath/${NAMESPACE}
+hadoop fs -mkdir /accumulo-classpath/${NAMESPACE}
 
 # GeoWave/Mesa specific operations
 if [ "${ITERATORS}" = "geomesa" ]; then
