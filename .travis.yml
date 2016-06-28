@@ -18,8 +18,7 @@ before_install:
 - sudo mv docker-compose /usr/local/bin
 
 install:
-- docker-compose --version
-- docker-compose --verbose build
+- docker-compose build
 
 before_deploy:
 - docker login -e . -p "${QUAY_PASSWORD}" -u "${QUAY_USER}" quay.io
