@@ -2,7 +2,7 @@ FROM daunnc/geodocker-hadoop:latest
 
 MAINTAINER Pomadchin Grigory, daunnc@gmail.com
 
-ENV ACCUMULO_VERSION 1.7.1
+ENV ACCUMULO_VERSION 1.7.2
 ENV ACCUMULO_HOME /opt/accumulo
 ENV ACCUMULO_CONF_DIR $ACCUMULO_HOME/conf
 ENV PATH $PATH:$ACCUMULO_HOME/bin
