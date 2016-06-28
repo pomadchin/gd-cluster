@@ -5,7 +5,8 @@ services:
 env:
   DOCKER_COMPOSE_VERSION: 1.8.0-rc2
 install:
-- docker-compose build
+- docker-compose --version
+- docker-compose --verbose build
 script:
 - docker run --rm quay.io/geotrellis/geodocker-cluster:${TRAVIS_COMMIT:0:7}
 before_deploy:
