@@ -18,15 +18,15 @@ case $i in
     -zs1=*|--zookeeper-server-1=*)
     ZOOKEEPER_SERVER_1="${i#*=}"
     shift
-    ;;   
+    ;;
     -zs2=*|--zookeeper-server-2=*)
     ZOOKEEPER_SERVER_2="${i#*=}"
     shift
-    ;;   
+    ;;
     -zs3=*|--zookeeper-server-3=*)
     ZOOKEEPER_SERVER_3="${i#*=}"
     shift
-    ;;       
+    ;;
     *)
     ;;
 esac
@@ -42,4 +42,4 @@ docker run \
   --env="ZOOKEEPER_SERVER_3=${ZOOKEEPER_SERVER_3}" \
   --detach \
   --restart=always \
-  daunnc/geodocker-zookeeper:${TAG:-"latest"}
+  geotrellis/geodocker-zookeeper:${TAG:-"latest"}

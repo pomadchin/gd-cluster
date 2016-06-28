@@ -10,7 +10,7 @@ case $i in
     -hma=*|--hadoop-master-address=*)
     HADOOP_MASTER_ADDRESS="${i#*=}"
     shift
-    ;;    
+    ;;
     *)
     ;;
 esac
@@ -24,4 +24,4 @@ docker run \
   --env="SPARK_DAEMON_MEMORY=2g" \
   --env="SPARK_SUBMIT_DRIVER_MEMORY=1g" \
   --env="HADOOP_MASTER_ADDRESS=${HADOOP_MASTER_ADDRESS}" \
-  daunnc/geodocker-spark:${TAG:-"latest"} master
+  geotrellis/geodocker-spark:${TAG:-"latest"} master
