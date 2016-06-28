@@ -1,14 +1,14 @@
 ---
 slaves: 2
 images:
-  - daunnc/geodocker-spark-worker:latest
-  - daunnc/geodocker-spark-master:latest
-  - daunnc/geodocker-accumulo-tserver:latest
-  - daunnc/geodocker-accumulo-master:latest
-  - daunnc/geodocker-accumulo-monitor:latest
-  - daunnc/geodocker-accumulo-tracer:latest
-  - daunnc/geodocker-accumulo-gc:latest
-  - daunnc/geodocker-hadoop-name:latest
-  - daunnc/geodocker-hadoop-sname:latest
-  - daunnc/geodocker-hadoop-data:latest
-  - daunnc/geodocker-zookeeper:latest
+  - geotrellis/geodocker-spark-worker:latest
+  - geotrellis/geodocker-spark-master:latest
+  - geotrellis/geodocker-accumulo-tserver:latest
+  - geotrellis/geodocker-accumulo-master:latest
+  - geotrellis/geodocker-accumulo-monitor:latest
+  - geotrellis/geodocker-accumulo-tracer:latest
+  - geotrellis/geodocker-accumulo-gc:latest
+  - geotrellis/geodocker-hadoop-name:latest
+  - geotrellis/geodocker-hadoop-sname:latest
+  - geotrellis/geodocker-hadoop-data:latest
+  - geotrellis/geodocker-zookeeper:latest
