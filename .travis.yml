@@ -2,6 +2,8 @@ sudo: required
 language: bash
 services:
 - docker
+env:
+  DOCKER_COMPOSE_VERSION: 1.8.0-rc2
 install:
 - docker-compose build
 script:
