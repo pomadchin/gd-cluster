@@ -1,16 +1,21 @@
 sudo: required
 language: bash
+
 services:
 - docker
+
 env:
-  DOCKER_COMPOSE_VERSION: 1.8.0-rc2
+  global:
+  - DOCKER_VERSION=1.12.0-rc2
+  - DOCKER_COMPOSE_VERSION=1.8.0-rc2
+
 install:
 - docker-compose --version
 - docker-compose --verbose build
-script:
-- docker run --rm quay.io/geotrellis/geodocker-cluster:${TRAVIS_COMMIT:0:7}
+
 before_deploy:
 - docker login -e . -p "${QUAY_PASSWORD}" -u "${QUAY_USER}" quay.io
+
 deploy:
 - provider: script
   script:
@@ -19,6 +24,7 @@ deploy:
   on:
     repo: geotrellis/geodocker-cluster
     tags: true
+
 notifications:
   slack:
     secure: CrkP/CaKNoVrTtiz+yT9Zd7T4E80kpH/J99/h1/Ae9bAryGsE3cA1VHwQFV8W3+oCaGU5O6hfFG2JeVmn+9n6Pm3Q96+obQbFD6etMbS0fz8vHJhO7GUqXs/vB7KBkE095XJ77ZdoUgpVfDl6XzoMcBUFIlK+rBiSW6P1AJyi8d5D4diNQzQ5mUL6Na3EZfEoS9Nvm6te/kq+a3fZIDdN0Zam9TlLEAJHQ1uD4zwszNl5bA+JaOLBe8d+AWzGrrxxdRv6NDoSS8Lc0UcX0hu8I3kKKNdjfkgVIt38wTTK8G6XavBAhsa3CuGXOs8y+X90HS1zL5bv4C+GJ6clkEu6Bb6AX2VLMsxjTDjeMD7t0yUKf4C5etmTCdTgFHGLd7+qU5dMxHMyKiBH3n3zrS3hpyi1w6DW6Et6X+w0i0sxmloaYzDXT0xFDrXMA3r7Ly43+Q3dI9TdYpOgQ9tULY4pdaqsSszilqtuOQEKf57x/adbOng6Xo+epCFFJljiI1HhwZSineQLtm8OOmAgsq/gMTCvbKUwokPA2755yxQeaaRaDESm72ON4hu+yknbkZoOs6jrFNrsiJPzQMFKkrU3WIfkw/twEn8JE07AUSakhcb31cVtq2vFpLG0dZgR0eE2xL62hJXW/K/B919zYD9YtC0VwSFP90B3Rpk3A9MaHQ=
