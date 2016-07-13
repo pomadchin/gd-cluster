@@ -1,8 +1,18 @@
 # GeoDocker Cluster
 
-Docker containers with prepared environment to run [GeoTrellis](https://github.com/geotrellis/geotrellis), [GeoMesa](https://github.com/locationtech/geomesa), and [GeoWave](https://github.com/ngageoint/geowave).
+Docker containers with prepared environment to run
+[GeoTrellis](https://github.com/geotrellis/geotrellis),
+[GeoMesa](https://github.com/locationtech/geomesa), and
+[GeoWave](https://github.com/ngageoint/geowave). GeoMesa
+and GeoWave specialized images can be found in
+[here](./extras/accumulo-gis/) and are built as `accumulo-gis`.
+
+> Note that iterators must be assigned to an accumulo namespace for GIS
+> functionality to be present in a cluster (see the accumulo-gis readme
+> for more).
 
 *Current version (latest)*: **0.2.1**
+
 
 ## Environment
 
