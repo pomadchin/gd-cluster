@@ -14,7 +14,7 @@ case $i in
     -hma=*|--hadoop-master-address=*)
     HADOOP_MASTER_ADDRESS="${i#*=}"
     shift
-    ;;    
+    ;;
     *)
     ;;
 esac
@@ -27,4 +27,4 @@ docker run \
   --detach \
   --restart=always \
   --env="HADOOP_MASTER_ADDRESS=${HADOOP_MASTER_ADDRESS}" \
-  daunnc/geodocker-hadoop:${TAG:-"latest"} data
+  geotrellis/geodocker-hadoop:${TAG:-"latest"} data

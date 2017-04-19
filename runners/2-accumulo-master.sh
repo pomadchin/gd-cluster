@@ -37,4 +37,4 @@ docker run \
   --env="ACCUMULO_ZOOKEEPERS=${ACCUMULO_ZOOKEEPERS}" \
   --env="ACCUMULO_SECRET=${ACCUMULO_SECRET}" \
   --env="ACCUMULO_PASSWORD=${ACCUMULO_PASSWORD}" \
-  daunnc/geodocker-accumulo:${TAG:-"latest"} master
+  geotrellis/geodocker-accumulo:${TAG:-"latest"} master

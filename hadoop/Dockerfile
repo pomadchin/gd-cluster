@@ -1,4 +1,4 @@
-FROM daunnc/geodocker-zookeeper:latest
+FROM geotrellis/geodocker-zookeeper:latest
 
 MAINTAINER Pomadchin Grigory, daunnc@gmail.com
 
@@ -21,4 +21,3 @@ VOLUME ["/data/hdfs"]
 
 WORKDIR "${HADOOP_HOME}"
 ENTRYPOINT [ "/sbin/entrypoint.sh" ]
-

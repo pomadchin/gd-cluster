@@ -1,4 +1,4 @@
-FROM daunnc/geodocker-accumulo:latest
+FROM geotrellis/geodocker-accumulo:latest
 
 MAINTAINER Pomadchin Grigory, daunnc@gmail.com
 

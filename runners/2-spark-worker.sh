@@ -36,4 +36,4 @@ docker run \
   --env="HADOOP_MASTER_ADDRESS=${HADOOP_MASTER_ADDRESS}" \
   --env="SPARK_MASTER=${SPARK_MASTER}" \
   --volume=${VOLUME:-"/data/gt/spark"}:/data/spark \
-  daunnc/geodocker-spark:${TAG:-"latest"} worker
+  geotrellis/geodocker-spark:${TAG:-"latest"} worker

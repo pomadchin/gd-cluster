@@ -1,4 +1,4 @@
-FROM daunnc/geodocker-hadoop:latest
+FROM geotrellis/geodocker-hadoop:latest
 
 MAINTAINER Pomadchin Grigory, daunnc@gmail.com
 
@@ -18,4 +18,3 @@ VOLUME [ "/data/spark" ]
 
 WORKDIR "${SPARK_HOME}"
 ENTRYPOINT [ "/sbin/entrypoint.sh" ]
-
